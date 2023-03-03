@@ -19,20 +19,15 @@
 }
 
 .title {
-  margin: 0 0 1rem;
+  margin: 0;
   line-height: 1.15;
-  font-size: 3.6rem;
-}
-
-.title {
-  text-align: center;
+  font-size: 4rem;
 }
 
 .title,
 .description {
   text-align: center;
 }
-
 
 .description {
   line-height: 1.5;
@@ -81,6 +76,7 @@
 
 .logo {
   height: 1em;
+  margin-left: 0.5rem;
 }
 
 @media (max-width: 600px) {
