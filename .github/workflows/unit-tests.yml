@@ -1,0 +1,17 @@
+name: 'Run Unit Tests'
+
+on: 'push'
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: 'Setup node and run tests'
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: 'package.json'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run test:ci
+
