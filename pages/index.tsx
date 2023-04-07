@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Container } from "@mui/material";
 import Dashboard from "./dashboard";
 
 import styles from "@/pages/index.module.css";
@@ -13,9 +12,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <Container>
-          <Dashboard></Dashboard>
-        </Container>
+        <Dashboard></Dashboard>
       </main>
     </div>
   );
