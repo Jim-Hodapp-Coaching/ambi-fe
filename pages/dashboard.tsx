@@ -1,10 +1,10 @@
 import React, { useState, useEffect, Fragment } from "react";
 import { Stack } from "@mui/material";
-import { DashboardTemperature } from "sections/dashboard/dashboard-temperature";
-import { DashboardPressure } from "sections/dashboard/dashboard-pressure";
-import { DashboardHumidity } from "sections/dashboard/dashboard-humidity";
-import { DashboardDust } from "sections/dashboard/dashboard-dust";
-import { DashboardAirPurity } from "sections/dashboard/dashboard-airpurity";
+import { DashboardTemperature } from "../sections/dashboard/dashboard-temperature";
+import { DashboardPressure } from "../sections/dashboard/dashboard-pressure";
+import { DashboardHumidity } from "../sections/dashboard/dashboard-humidity";
+import { DashboardDust } from "../sections/dashboard/dashboard-dust";
+import { DashboardAirPurity } from "../sections/dashboard/dashboard-airpurity";
 
 interface IReading {
   temperature: string;
