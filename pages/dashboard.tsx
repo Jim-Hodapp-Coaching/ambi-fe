@@ -27,7 +27,7 @@ const Dashboard: React.FC<any> = ({}) => {
 
   useEffect(() => {
     if (!listening) {
-      const events = new EventSource("http://localhost:4000/events");
+      const events = new EventSource("http://localhost:8000/events");
 
       events.onmessage = (event) => {
         const parsedData = JSON.parse(event.data);
@@ -42,33 +42,38 @@ const Dashboard: React.FC<any> = ({}) => {
 
   return (
     <Fragment>
-      <Stack
-        direction="column"
-        justifyContent="space-evenly"
-        alignItems="flex-start"
-        spacing={2}
-      >
-        <DashboardTemperature
-          sx={{ height: "100%" }}
-          value={lastReading.temperature}
-        />
-        <DashboardPressure
-          sx={{ height: "100%" }}
-          value={lastReading.pressure}
-        />
-        <DashboardHumidity
-          sx={{ height: "100%" }}
-          value={lastReading.humidity}
-        />
-        <DashboardDust
-          sx={{ height: "100%" }}
-          value={lastReading.dust_concentration}
-        />
-        <DashboardAirPurity
-          sx={{ height: "100%" }}
-          value={lastReading.air_purity}
-        />
-      </Stack>
+      {/*Conditionally render based on state of listening to prevent hydration errors*/}
+      {listening ? (
+        <Stack
+          direction="column"
+          justifyContent="space-evenly"
+          alignItems="flex-start"
+          spacing={2}
+        >
+          <DashboardTemperature
+            sx={{ height: "100%" }}
+            value={lastReading.temperature}
+          />
+          <DashboardPressure
+            sx={{ height: "100%" }}
+            value={lastReading.pressure}
+          />
+          <DashboardHumidity
+            sx={{ height: "100%" }}
+            value={lastReading.humidity}
+          />
+          <DashboardDust
+            sx={{ height: "100%" }}
+            value={lastReading.dust_concentration}
+          />
+          <DashboardAirPurity
+            sx={{ height: "100%" }}
+            value={lastReading.air_purity}
+          />
+        </Stack>
+      ) : (
+        <h1>Loading...</h1>
+      )}
     </Fragment>
   );
 };
