@@ -1,5 +1,9 @@
-This is the frontend applications supporting the Ambi Rust & Go server projects.
-## Getting Started
+This is the frontend application supporting the [Ambi Rust](https://github.com/Jim-Hodapp-Coaching/ambi-rs) project. It provides a unified dashboard for ambient sensor data.
+
+![Ambi Front-End](docs/sequence-front-end.png)
+## Quickstart
+
+To view a functional dashboard, start the mock-client and server and then;
 
 Simply run:
 
@@ -9,10 +13,7 @@ npm i && npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Running the Mock-Client
+Clone the Ambi Mock Client repo and [follow these instructions](https://github.com/Jim-Hodapp-Coaching/ambi_mock_client#usage-1)
+## Running the Server
+Clone the Ambi Server repo and [follow these instructions](https://github.com/Jim-Hodapp-Coaching/ambi-rs#non-container-setup)
