@@ -1,6 +1,6 @@
 This is the frontend application supporting the [Ambi Rust](https://github.com/Jim-Hodapp-Coaching/ambi-rs) project. It provides a unified dashboard for ambient sensor data.
 
-![Ambi Front-End](docs/sequence-front-end.png)
+![Ambi Front-End](docs/sequence.png)
 ## Quickstart
 
 To view a functional dashboard, start the mock-client and server and then;
